@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Stichoza\GoogleTranslate\GoogleTranslate;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +19,4 @@ Route::get('/', function () {
     $tr = new GoogleTranslate('fr'); 
     $tr->setSource('en')->setTarget('fr')->translate('Hello-world').' (English Translation) - hello world';
     return view('welcome'); 
-});
-Route::get('translate', [TranslationController::class, 'index'])->name('translate');
-Route::get('language/detection', [LanguageDetectionController::class, 'index'])->name('language.detection');
- 
+}); 
