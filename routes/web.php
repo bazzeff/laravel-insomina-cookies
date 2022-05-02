@@ -9,11 +9,13 @@ use Stichoza\GoogleTranslate\GoogleTranslate;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great! return view('welcome'); 
+| contains the "web" middleware group. Now create something great!
 |
 */
 
 Route::get('/', function () {
-    $tr = new GoogleTranslate('fr');   
-    return $tr->setSource('en')->setTarget('fr')->translate('Hello-world').' (English Translation) - hello world';
+    $tr = new GoogleTranslate('fr'); 
+    $tr->setSource('en')->setTarget('fr')->translate('Hello-world').' (English Translation) - hello world';
+    return view('welcome');
 });
+
