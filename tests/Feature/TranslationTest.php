@@ -1,18 +1,26 @@
 <?php
 
-namespace Stichoza\GoogleTranslate\Tests;
+namespace Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 
 class TranslationTest extends TestCase
-{
+{   
+
     public $tr;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->tr = new GoogleTranslate();
     }
+    /**
+     * A basic feature test example.
+     *
+     * @return void
+     */ 
 
     public function testTranslationEquality()
     {
