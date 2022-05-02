@@ -11,8 +11,7 @@ class TranslationController extends Controller
     public function index()
     {
         // 
-        $translate = new TranslateClient([
-            'key' => 'AIzaSyBnJ2yP4ZW3J8MiDxLj-BIYVbg3p8PfmIU'
+        $translate = new TranslateClient([ 
         ]); 
         // Translate text from english to french.
         $result = $translate->translate('Hello world!', [
